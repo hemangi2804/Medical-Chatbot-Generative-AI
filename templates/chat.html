@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Medical AI Assistant</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="chatbox">
+
+        <!-- Header -->
+        <div class="header">
+
+            <div class="profile">
+
+                <div class="avatar">
+                    <i class="fa-solid fa-user-doctor"></i>
+                </div>
+
+                <div>
+                    <h2>Medical AI Assistant</h2>
+                    <p><span class="status"></span> Online</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Chat Messages -->
+        <div class="chat-body" id="chat-body">
+
+            <div class="bot-message">
+
+                <div class="bot-icon">
+                    <i class="fa-solid fa-stethoscope"></i>
+                </div>
+
+                <div class="message">
+                    <strong>Hello 👋</strong><br><br>
+
+                    I am your <b>Healthcare AI Assistant</b>.<br><br>
+
+                    Ask me anything about:
+                    <ul>
+                        <li>Diseases</li>
+                        <li>Symptoms</li>
+                        <li>Medicines</li>
+                        <li>Nutrition</li>
+                        <li>General Health</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+
+            <input
+                type="text"
+                id="question"
+                placeholder="Ask your health question..."
+                autocomplete="off">
+
+            <button id="send-btn">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- JavaScript -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
